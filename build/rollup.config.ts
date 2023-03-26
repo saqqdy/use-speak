@@ -2,6 +2,7 @@ import type { RollupOptions } from 'rollup'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import babel from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
+import cleanup from 'rollup-plugin-cleanup'
 import terser from '@rollup/plugin-terser'
 import typescript from '@rollup/plugin-typescript'
 import alias, { type ResolverObject } from '@rollup/plugin-alias'
@@ -53,6 +54,9 @@ const options: RollupOptions = {
 			babelHelpers: 'bundled',
 			extensions,
 			exclude: ['node_modules']
+		}),
+		cleanup({
+			comments: 'all'
 		}),
 		filesize({ reporter }),
 		visualizer()
@@ -114,6 +118,9 @@ export default [
 			commonjs({
 				sourceMap: false,
 				exclude: ['core-js']
+			}),
+			cleanup({
+				comments: 'all'
 			}),
 			filesize({ reporter }),
 			visualizer()

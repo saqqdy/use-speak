@@ -30,6 +30,7 @@ specifiers:
   reinstaller: ^2.3.0
   rm-all: ^1.0.0
   rollup: ^3.20.2
+  rollup-plugin-cleanup: ^3.2.1
   rollup-plugin-filesize: ^10.0.0
   rollup-plugin-visualizer: ^5.9.0
   ts-jest: ^29.0.5
@@ -75,6 +76,7 @@ devDependencies:
   reinstaller: 2.3.0_js-cool@3.0.0-beta.5
   rm-all: 1.0.0_core-js@3.29.1
   rollup: 3.20.2
+  rollup-plugin-cleanup: 3.2.1_rollup@3.20.2
   rollup-plugin-filesize: 10.0.0
   rollup-plugin-visualizer: 5.9.0_rollup@3.20.2
   ts-jest: 29.0.5_6tbz74k542pb7xqsa62i4fqrfq
@@ -4156,6 +4158,10 @@ packages:
     engines: {node: '>=4.0'}
     dev: true
 
+  /estree-walker/0.6.1:
+    resolution: {integrity: sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==}
+    dev: true
+
   /estree-walker/2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
 
@@ -5562,6 +5568,15 @@ packages:
     resolution: {integrity: sha512-8wb9Yw966OSxApiCt0K3yNJL8pnNeIv+OEq2YMidz4FKP6nonSRoOXc80iXY4JaN2FC11B9qsNmDsm+ZOfMROA==}
     dev: true
 
+  /js-cleanup/1.2.0:
+    resolution: {integrity: sha512-JeDD0yiiSt80fXzAVa/crrS0JDPQljyBG/RpOtaSbyDq03VHa9szJWMaWOYU/bcTn412uMN2MxApXq8v79cUiQ==}
+    engines: {node: ^10.14.2 || >=12.0.0}
+    dependencies:
+      magic-string: 0.25.9
+      perf-regexes: 1.0.1
+      skip-regex: 1.0.2
+    dev: true
+
   /js-cool/2.8.0_core-js@3.29.1:
     resolution: {integrity: sha512-k2oWpZfYgqXaciJaG/aAKg2PoNyiZ37SeO0t6yVtlolY50Lwv8WnqmSekSAHTrXvxtLzN4VNj8eGhQi9lG6abQ==}
     peerDependencies:
@@ -6580,6 +6595,11 @@ packages:
       through: 2.3.8
     dev: true
 
+  /perf-regexes/1.0.1:
+    resolution: {integrity: sha512-L7MXxUDtqr4PUaLFCDCXBfGV/6KLIuSEccizDI7JxT+c9x1G1v04BQ4+4oag84SHaCdrBgQAIs/Cqn+flwFPng==}
+    engines: {node: '>=6.14'}
+    dev: true
+
   /performance-now/2.1.0:
     resolution: {integrity: sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==}
     dev: true
@@ -6996,6 +7016,17 @@ packages:
       js-cool: 2.8.0_core-js@3.29.1
     dev: true
 
+  /rollup-plugin-cleanup/3.2.1_rollup@3.20.2:
+    resolution: {integrity: sha512-zuv8EhoO3TpnrU8MX8W7YxSbO4gmOR0ny06Lm3nkFfq0IVKdBUtHwhVzY1OAJyNCIAdLiyPnOrU0KnO0Fri1GQ==}
+    engines: {node: ^10.14.2 || >=12.0.0}
+    peerDependencies:
+      rollup: '>=2.0'
+    dependencies:
+      js-cleanup: 1.2.0
+      rollup: 3.20.2
+      rollup-pluginutils: 2.8.2
+    dev: true
+
   /rollup-plugin-filesize/10.0.0:
     resolution: {integrity: sha512-JAYYhzCcmGjmCzo3LEHSDE3RAPHKIeBdpqRhiyZSv5o/3wFhktUOzYAWg/uUKyEu5dEaVaql6UOmaqHx1qKrZA==}
     engines: {node: '>=16.0.0'}
@@ -7028,6 +7059,12 @@ packages:
       rollup: 3.20.2
       source-map: 0.7.4
       yargs: 17.6.2
+    dev: true
+
+  /rollup-pluginutils/2.8.2:
+    resolution: {integrity: sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==}
+    dependencies:
+      estree-walker: 0.6.1
     dev: true
 
   /rollup/3.20.2:
@@ -7158,6 +7195,11 @@ packages:
 
   /sisteransi/1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
+    dev: true
+
+  /skip-regex/1.0.2:
+    resolution: {integrity: sha512-pEjMUbwJ5Pl/6Vn6FsamXHXItJXSRftcibixDmNCWbWhic0hzHrwkMZo0IZ7fMRH9KxcWDFSkzhccB4285PutA==}
+    engines: {node: '>=4.2'}
     dev: true
 
   /slash/3.0.0:
