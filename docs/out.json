@@ -16,7 +16,8 @@
 				{
 					"fileName": "index.ts",
 					"line": 211,
-					"character": 33
+					"character": 33,
+					"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L211"
 				}
 			],
 			"target": 16
@@ -38,7 +39,8 @@
 						{
 							"fileName": "index.ts",
 							"line": 34,
-							"character": 1
+							"character": 1,
+							"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L34"
 						}
 					],
 					"type": {
@@ -56,7 +58,8 @@
 						{
 							"fileName": "index.ts",
 							"line": 33,
-							"character": 1
+							"character": 1,
+							"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L33"
 						}
 					],
 					"type": {
@@ -74,7 +77,8 @@
 						{
 							"fileName": "index.ts",
 							"line": 35,
-							"character": 1
+							"character": 1,
+							"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L35"
 						}
 					],
 					"type": {
@@ -92,10 +96,6 @@
 									{
 										"type": "union",
 										"types": [
-											{
-												"type": "literal",
-												"value": "text"
-											},
 											{
 												"type": "literal",
 												"value": "lang"
@@ -138,6 +138,10 @@
 											},
 											{
 												"type": "literal",
+												"value": "text"
+											},
+											{
+												"type": "literal",
 												"value": "voice"
 											},
 											{
@@ -172,7 +176,8 @@
 				{
 					"fileName": "index.ts",
 					"line": 32,
-					"character": 17
+					"character": 17,
+					"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L32"
 				}
 			]
 		},
@@ -193,7 +198,8 @@
 						{
 							"fileName": "index.ts",
 							"line": 9,
-							"character": 1
+							"character": 1,
+							"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L9"
 						}
 					],
 					"type": {
@@ -211,7 +217,8 @@
 						{
 							"fileName": "index.ts",
 							"line": 10,
-							"character": 1
+							"character": 1,
+							"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L10"
 						}
 					],
 					"type": {
@@ -229,7 +236,8 @@
 						{
 							"fileName": "index.ts",
 							"line": 7,
-							"character": 1
+							"character": 1,
+							"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L7"
 						}
 					],
 					"type": {
@@ -247,7 +255,8 @@
 						{
 							"fileName": "index.ts",
 							"line": 11,
-							"character": 1
+							"character": 1,
+							"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L11"
 						}
 					],
 					"type": {
@@ -265,7 +274,8 @@
 						{
 							"fileName": "index.ts",
 							"line": 8,
-							"character": 1
+							"character": 1,
+							"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L8"
 						}
 					],
 					"type": {
@@ -287,7 +297,8 @@
 										{
 											"fileName": "index.ts",
 											"line": 8,
-											"character": 15
+											"character": 15,
+											"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L8"
 										}
 									],
 									"signatures": [
@@ -333,7 +344,8 @@
 						{
 							"fileName": "index.ts",
 							"line": 12,
-							"character": 1
+							"character": 1,
+							"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L12"
 						}
 					],
 					"type": {
@@ -359,7 +371,8 @@
 				{
 					"fileName": "index.ts",
 					"line": 6,
-					"character": 17
+					"character": 17,
+					"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L6"
 				}
 			]
 		},
@@ -373,7 +386,8 @@
 				{
 					"fileName": "index.ts",
 					"line": 14,
-					"character": 12
+					"character": 12,
+					"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L14"
 				}
 			],
 			"type": {
@@ -466,7 +480,8 @@
 				{
 					"fileName": "index.ts",
 					"line": 52,
-					"character": 9
+					"character": 9,
+					"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L52"
 				}
 			],
 			"signatures": [
@@ -516,7 +531,8 @@
 												{
 													"fileName": "index.ts",
 													"line": 203,
-													"character": 2
+													"character": 2,
+													"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L203"
 												}
 											],
 											"type": {
@@ -531,7 +547,8 @@
 														{
 															"fileName": "index.ts",
 															"line": 179,
-															"character": 10
+															"character": 10,
+															"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L179"
 														}
 													],
 													"signatures": [
@@ -545,7 +562,7 @@
 																"summary": [
 																	{
 																		"kind": "text",
-																		"text": "强制取消全部播报，正在播报的也立即取消"
+																		"text": "Forced cancellation of all broadcasts, and immediate cancellation of those being broadcast"
 																	}
 																]
 															},
@@ -568,7 +585,8 @@
 												{
 													"fileName": "index.ts",
 													"line": 207,
-													"character": 2
+													"character": 2,
+													"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L207"
 												}
 											],
 											"type": {
@@ -583,7 +601,8 @@
 														{
 															"fileName": "index.ts",
 															"line": 136,
-															"character": 10
+															"character": 10,
+															"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L136"
 														}
 													],
 													"signatures": [
@@ -606,7 +625,7 @@
 																		"content": [
 																			{
 																				"kind": "text",
-																				"text": "result 返回voice"
+																				"text": "result - utter: SpeechSynthesisUtterance"
 																			}
 																		]
 																	}
@@ -642,7 +661,8 @@
 												{
 													"fileName": "index.ts",
 													"line": 206,
-													"character": 2
+													"character": 2,
+													"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L206"
 												}
 											],
 											"type": {
@@ -657,7 +677,8 @@
 														{
 															"fileName": "index.ts",
 															"line": 113,
-															"character": 10
+															"character": 10,
+															"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L113"
 														}
 													],
 													"signatures": [
@@ -671,7 +692,7 @@
 																"summary": [
 																	{
 																		"kind": "text",
-																		"text": "get default voice"
+																		"text": "get voice"
 																	}
 																],
 																"blockTags": [
@@ -680,7 +701,7 @@
 																		"content": [
 																			{
 																				"kind": "text",
-																				"text": "result 返回voice"
+																				"text": "result voice: SpeechSynthesisVoice"
 																			}
 																		]
 																	}
@@ -716,7 +737,8 @@
 												{
 													"fileName": "index.ts",
 													"line": 204,
-													"character": 2
+													"character": 2,
+													"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L204"
 												}
 											],
 											"type": {
@@ -731,7 +753,8 @@
 														{
 															"fileName": "index.ts",
 															"line": 186,
-															"character": 10
+															"character": 10,
+															"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L186"
 														}
 													],
 													"signatures": [
@@ -745,7 +768,7 @@
 																"summary": [
 																	{
 																		"kind": "text",
-																		"text": "暂停全部播报，正在播报的也立即取消"
+																		"text": "Suspension of all broadcasts and immediate cancellation of those being broadcast"
 																	}
 																]
 															},
@@ -768,7 +791,8 @@
 												{
 													"fileName": "index.ts",
 													"line": 198,
-													"character": 2
+													"character": 2,
+													"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L198"
 												}
 											],
 											"type": {
@@ -794,7 +818,8 @@
 												{
 													"fileName": "index.ts",
 													"line": 202,
-													"character": 2
+													"character": 2,
+													"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L202"
 												}
 											],
 											"type": {
@@ -809,7 +834,8 @@
 														{
 															"fileName": "index.ts",
 															"line": 165,
-															"character": 10
+															"character": 10,
+															"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L165"
 														}
 													],
 													"signatures": [
@@ -823,7 +849,7 @@
 																"summary": [
 																	{
 																		"kind": "text",
-																		"text": "移除未消费的播报"
+																		"text": "Remove unconsumed speak"
 																	}
 																],
 																"blockTags": [
@@ -832,7 +858,7 @@
 																		"content": [
 																			{
 																				"kind": "text",
-																				"text": "result 返回取消结果 true=取消成功 false=播报内容未找到或播报已消费"
+																				"text": "result - cancellation result true=Cancellation success false=Broadcast content not found or broadcast consumed"
 																			}
 																		]
 																	}
@@ -849,7 +875,7 @@
 																		"summary": [
 																			{
 																				"kind": "text",
-																				"text": "播报的key"
+																				"text": "key of effect"
 																			}
 																		]
 																	},
@@ -878,7 +904,8 @@
 												{
 													"fileName": "index.ts",
 													"line": 205,
-													"character": 2
+													"character": 2,
+													"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L205"
 												}
 											],
 											"type": {
@@ -893,7 +920,8 @@
 														{
 															"fileName": "index.ts",
 															"line": 193,
-															"character": 10
+															"character": 10,
+															"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L193"
 														}
 													],
 													"signatures": [
@@ -907,7 +935,7 @@
 																"summary": [
 																	{
 																		"kind": "text",
-																		"text": "恢复全部播报，正在播报的也立即取消"
+																		"text": "Resume all broadcasts and immediately cancel those being broadcast"
 																	}
 																]
 															},
@@ -930,7 +958,8 @@
 												{
 													"fileName": "index.ts",
 													"line": 201,
-													"character": 2
+													"character": 2,
+													"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L201"
 												}
 											],
 											"type": {
@@ -945,7 +974,8 @@
 														{
 															"fileName": "index.ts",
 															"line": 148,
-															"character": 10
+															"character": 10,
+															"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L148"
 														}
 													],
 													"signatures": [
@@ -959,7 +989,7 @@
 																"summary": [
 																	{
 																		"kind": "text",
-																		"text": "语音播报"
+																		"text": "speak"
 																	}
 																],
 																"blockTags": [
@@ -968,7 +998,7 @@
 																		"content": [
 																			{
 																				"kind": "text",
-																				"text": "result 返回播报的effectKey"
+																				"text": "result - effectKey: symbol"
 																			}
 																		]
 																	}
@@ -985,7 +1015,7 @@
 																		"summary": [
 																			{
 																				"kind": "text",
-																				"text": "需要播报的文字"
+																				"text": "speak text"
 																			}
 																		]
 																	},
@@ -1004,7 +1034,7 @@
 																		"summary": [
 																			{
 																				"kind": "text",
-																				"text": "配置"
+																				"text": "utter options: UtterOptions"
 																			}
 																		]
 																	},
@@ -1023,10 +1053,6 @@
 																					{
 																						"type": "union",
 																						"types": [
-																							{
-																								"type": "literal",
-																								"value": "text"
-																							},
 																							{
 																								"type": "literal",
 																								"value": "lang"
@@ -1066,6 +1092,10 @@
 																							{
 																								"type": "literal",
 																								"value": "rate"
+																							},
+																							{
+																								"type": "literal",
+																								"value": "text"
 																							},
 																							{
 																								"type": "literal",
@@ -1117,7 +1147,8 @@
 												{
 													"fileName": "index.ts",
 													"line": 200,
-													"character": 2
+													"character": 2,
+													"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L200"
 												}
 											],
 											"type": {
@@ -1137,7 +1168,8 @@
 												{
 													"fileName": "index.ts",
 													"line": 199,
-													"character": 2
+													"character": 2,
+													"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L199"
 												}
 											],
 											"type": {
@@ -1186,7 +1218,8 @@
 										{
 											"fileName": "index.ts",
 											"line": 197,
-											"character": 8
+											"character": 8,
+											"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L197"
 										}
 									]
 								}
@@ -1228,7 +1261,8 @@
 		{
 			"fileName": "index.ts",
 			"line": 1,
-			"character": 0
+			"character": 0,
+			"url": "https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L1"
 		}
 	]
 }

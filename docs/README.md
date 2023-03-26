@@ -37,6 +37,77 @@ $ yarn add use-speak
 
 ## Usage
 
+### Use in Vue `>=3.0`
+
+```vue
+<script setup>
+import { getCurrentInstance, onMounted } from 'vue'
+import useSpeak from 'use-speak'
+
+const speech = useSpeak({ lang: 'zh_CN' })
+
+onMounted(() => {
+  speech.speak('new bee')
+})
+
+useExpose({ speech })
+</script>
+```
+
+### Use in Vue `2.7`
+
+```vue
+<script>
+import useSpeak from 'use-speak'
+
+export default {
+  setup() {
+    const speech = useSpeak({ lang: 'zh_CN' })
+    speech.speak('new bee')
+
+    return { speech }
+  }
+}
+</script>
+```
+
+### Use in Vue `<=2.6`
+
+> Add `@vue/composition-api` to the `project.json` dependencies and run install.
+
+```json
+{
+  "dependencies": {
+    "@vue/composition-api": "latest"
+  }
+}
+```
+
+```js
+// main.js
+import Vue from 'vue'
+import VueCompositionApi from '@vue/composition-api'
+
+Vue.use(VueCompositionApi)
+
+new Vue({}).$mount('#app')
+```
+
+```vue
+<script>
+import useSpeak from 'use-speak'
+
+export default {
+  setup() {
+    const speech = useSpeak({ lang: 'zh_CN' })
+    speech.speak('new bee')
+
+    return { speech }
+  }
+}
+</script>
+```
+
 ## Support & Issues
 
 Please open an issue [here](https://github.com/saqqdy/use-speak/issues).

@@ -1,6 +1,6 @@
 import { ref, shallowRef, watch } from 'vue-demi'
 import type { Ref, ShallowRef } from 'vue-demi'
-import extend from 'js-cool/lib/extend'
+import { extend } from 'js-cool'
 import { inBrowser, isChrome } from './utils'
 
 export interface SpeechOptions {

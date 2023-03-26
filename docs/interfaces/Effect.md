@@ -18,7 +18,7 @@
 
 #### Defined in
 
-index.ts:34
+[index.ts:34](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L34)
 
 ---
 
@@ -28,14 +28,14 @@ index.ts:34
 
 #### Defined in
 
-index.ts:33
+[index.ts:33](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L33)
 
 ---
 
 ### utterOptions
 
-• **utterOptions**: `Partial`<`Pick`<`SpeechSynthesisUtterance`, `"text"` \| `"lang"` \| `"onboundary"` \| `"onend"` \| `"onerror"` \| `"onmark"` \| `"onpause"` \| `"onresume"` \| `"onstart"` \| `"pitch"` \| `"rate"` \| `"voice"` \| `"volume"`\>\>
+• **utterOptions**: `Partial`<`Pick`<`SpeechSynthesisUtterance`, `"lang"` \| `"onboundary"` \| `"onend"` \| `"onerror"` \| `"onmark"` \| `"onpause"` \| `"onresume"` \| `"onstart"` \| `"pitch"` \| `"rate"` \| `"text"` \| `"voice"` \| `"volume"`\>\>
 
 #### Defined in
 
-index.ts:35
+[index.ts:35](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L35)

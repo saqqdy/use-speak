@@ -1,10 +1,9 @@
 {
 	"compilerOptions": {
-		"allowJs": true,
 		"strict": true,
 		"module": "ESNext",
 		"noImplicitAny": true,
-		"removeComments": true,
+		// "removeComments": true,
 		"moduleResolution": "node",
 		"noImplicitOverride": true,
 		"noUnusedLocals": true,
@@ -25,7 +24,7 @@
 		"baseUrl": ".",
 		"paths": {
 			"#lib/*": ["./src/*"],
-			"@/package": ["./package.json"],
+			"@/package": ["./package.json"]
 		}
 	},
 	"exclude": ["**/__tests__", "temp"]

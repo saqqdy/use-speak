@@ -35,13 +35,13 @@ Renames and re-exports [useSpeech](modules.md#usespeech)
 
 #### Defined in
 
-index.ts:14
+[index.ts:14](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L14)
 
 ## Functions
 
 ### useSpeech
 
-▸ **useSpeech**(`options`): `undefined` \| { `cancel`: () => `void` ; `getCurrentUtter`: () => `SpeechSynthesisUtterance` \| `null` ; `getVoice`: () => `SpeechSynthesisVoice` \| `undefined` ; `pause`: () => `void` ; `ready`: `Ref`<`boolean`\> ; `remove`: (`effectKey`: `symbol`) => `boolean` ; `resume`: () => `void` ; `speak`: (`content`: `string`, `utterOptions`: `Partial`<`Pick`<`SpeechSynthesisUtterance`, `"text"` \| `"lang"` \| `"onboundary"` \| `"onend"` \| `"onerror"` \| `"onmark"` \| `"onpause"` \| `"onresume"` \| `"onstart"` \| `"pitch"` \| `"rate"` \| `"voice"` \| `"volume"`\>\>) => [`Effect`](interfaces/Effect.md)[``"key"``] ; `speech`: `SpeechSynthesis` ; `voice`: `ShallowRef`<`undefined` \| `SpeechSynthesisVoice`\> }
+▸ **useSpeech**(`options`): `undefined` \| { `cancel`: () => `void` ; `getCurrentUtter`: () => `SpeechSynthesisUtterance` \| `null` ; `getVoice`: () => `SpeechSynthesisVoice` \| `undefined` ; `pause`: () => `void` ; `ready`: `Ref`<`boolean`\> ; `remove`: (`effectKey`: `symbol`) => `boolean` ; `resume`: () => `void` ; `speak`: (`content`: `string`, `utterOptions`: `Partial`<`Pick`<`SpeechSynthesisUtterance`, `"lang"` \| `"onboundary"` \| `"onend"` \| `"onerror"` \| `"onmark"` \| `"onpause"` \| `"onresume"` \| `"onstart"` \| `"pitch"` \| `"rate"` \| `"text"` \| `"voice"` \| `"volume"`\>\>) => [`Effect`](interfaces/Effect.md)[``"key"``] ; `speech`: `SpeechSynthesis` ; `voice`: `ShallowRef`<`undefined` \| `SpeechSynthesisVoice`\> }
 
 #### Parameters
 
@@ -51,8 +51,8 @@ index.ts:14
 
 #### Returns
 
-`undefined` \| { `cancel`: () => `void` ; `getCurrentUtter`: () => `SpeechSynthesisUtterance` \| `null` ; `getVoice`: () => `SpeechSynthesisVoice` \| `undefined` ; `pause`: () => `void` ; `ready`: `Ref`<`boolean`\> ; `remove`: (`effectKey`: `symbol`) => `boolean` ; `resume`: () => `void` ; `speak`: (`content`: `string`, `utterOptions`: `Partial`<`Pick`<`SpeechSynthesisUtterance`, `"text"` \| `"lang"` \| `"onboundary"` \| `"onend"` \| `"onerror"` \| `"onmark"` \| `"onpause"` \| `"onresume"` \| `"onstart"` \| `"pitch"` \| `"rate"` \| `"voice"` \| `"volume"`\>\>) => [`Effect`](interfaces/Effect.md)[``"key"``] ; `speech`: `SpeechSynthesis` ; `voice`: `ShallowRef`<`undefined` \| `SpeechSynthesisVoice`\> }
+`undefined` \| { `cancel`: () => `void` ; `getCurrentUtter`: () => `SpeechSynthesisUtterance` \| `null` ; `getVoice`: () => `SpeechSynthesisVoice` \| `undefined` ; `pause`: () => `void` ; `ready`: `Ref`<`boolean`\> ; `remove`: (`effectKey`: `symbol`) => `boolean` ; `resume`: () => `void` ; `speak`: (`content`: `string`, `utterOptions`: `Partial`<`Pick`<`SpeechSynthesisUtterance`, `"lang"` \| `"onboundary"` \| `"onend"` \| `"onerror"` \| `"onmark"` \| `"onpause"` \| `"onresume"` \| `"onstart"` \| `"pitch"` \| `"rate"` \| `"text"` \| `"voice"` \| `"volume"`\>\>) => [`Effect`](interfaces/Effect.md)[``"key"``] ; `speech`: `SpeechSynthesis` ; `voice`: `ShallowRef`<`undefined` \| `SpeechSynthesisVoice`\> }
 
 #### Defined in
 
-index.ts:52
+[index.ts:52](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L52)
