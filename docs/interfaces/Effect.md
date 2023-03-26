@@ -1,4 +1,4 @@
-[index.md - v1.0.0-alpha.1](../README.md) / [Exports](../modules.md) / Effect
+[index.md - v1.0.0-alpha.2](../README.md) / [Exports](../modules.md) / Effect
 
 # Interface: Effect
 
@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[index.ts:34](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L34)
+[index.ts:34](https://github.com/saqqdy/use-speak/blob/e3c4c20/src/index.ts#L34)
 
 ---
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[index.ts:33](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L33)
+[index.ts:33](https://github.com/saqqdy/use-speak/blob/e3c4c20/src/index.ts#L33)
 
 ---
 
@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[index.ts:35](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L35)
+[index.ts:35](https://github.com/saqqdy/use-speak/blob/e3c4c20/src/index.ts#L35)

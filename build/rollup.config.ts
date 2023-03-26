@@ -73,14 +73,12 @@ export default [
 			{
 				file: distDir(pkg.main),
 				exports: 'auto',
-				format: 'cjs',
-				banner
+				format: 'cjs'
 			},
 			{
 				file: distDir(pkg.module),
 				exports: 'auto',
-				format: 'es',
-				banner
+				format: 'es'
 			}
 		],
 		external(id: string) {
@@ -115,12 +113,12 @@ export default [
 		},
 		plugins: [
 			nodeResolver,
+			cleanup({
+				comments: 'all'
+			}),
 			commonjs({
 				sourceMap: false,
 				exclude: ['core-js']
-			}),
-			cleanup({
-				comments: 'all'
 			}),
 			filesize({ reporter }),
 			visualizer()

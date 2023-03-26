@@ -1,6 +1,6 @@
-[index.md - v1.0.0-alpha.1](README.md) / Exports
+[index.md - v1.0.0-alpha.2](README.md) / Exports
 
-# index.md - v1.0.0-alpha.1
+# index.md - v1.0.0-alpha.2
 
 ## Table of contents
 
@@ -35,7 +35,7 @@ Renames and re-exports [useSpeech](modules.md#usespeech)
 
 #### Defined in
 
-[index.ts:14](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L14)
+[index.ts:14](https://github.com/saqqdy/use-speak/blob/e3c4c20/src/index.ts#L14)
 
 ## Functions
 
@@ -55,4 +55,4 @@ Renames and re-exports [useSpeech](modules.md#usespeech)
 
 #### Defined in
 
-[index.ts:52](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L52)
+[index.ts:52](https://github.com/saqqdy/use-speak/blob/e3c4c20/src/index.ts#L52)

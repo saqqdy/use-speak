@@ -1,4 +1,4 @@
-[index.md - v1.0.0-alpha.1](../README.md) / [Exports](../modules.md) / SpeechOptions
+[index.md - v1.0.0-alpha.2](../README.md) / [Exports](../modules.md) / SpeechOptions
 
 # Interface: SpeechOptions
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[index.ts:9](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L9)
+[index.ts:9](https://github.com/saqqdy/use-speak/blob/e3c4c20/src/index.ts#L9)
 
 ---
 
@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[index.ts:10](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L10)
+[index.ts:10](https://github.com/saqqdy/use-speak/blob/e3c4c20/src/index.ts#L10)
 
 ---
 
@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[index.ts:7](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L7)
+[index.ts:7](https://github.com/saqqdy/use-speak/blob/e3c4c20/src/index.ts#L7)
 
 ---
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[index.ts:11](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L11)
+[index.ts:11](https://github.com/saqqdy/use-speak/blob/e3c4c20/src/index.ts#L11)
 
 ---
 
@@ -61,7 +61,7 @@
 
 #### Defined in
 
-[index.ts:8](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L8)
+[index.ts:8](https://github.com/saqqdy/use-speak/blob/e3c4c20/src/index.ts#L8)
 
 ---
 
@@ -71,4 +71,4 @@
 
 #### Defined in
 
-[index.ts:12](https://github.com/saqqdy/use-speak/blob/b812dea/src/index.ts#L12)
+[index.ts:12](https://github.com/saqqdy/use-speak/blob/e3c4c20/src/index.ts#L12)
