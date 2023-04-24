@@ -87,7 +87,7 @@
 		"rollup-plugin-visualizer": "^5.9.0",
 		"ts-jest": "^29.0.5",
 		"tsnd": "^1.1.0",
-		"typedoc": "^0.23.28",
+		"typedoc": "^0.24.6",
 		"typedoc-plugin-markdown": "^3.14.0",
 		"typescript": "^5.0.2",
 		"vue": "^3.2.47",
