@@ -42,13 +42,13 @@ $ yarn add use-speak
 import { getCurrentInstance, onMounted } from 'vue'
 import useSpeak from 'use-speak'
 
-const speech = useSpeak({ lang: 'zh_CN' })
+const speaker = useSpeak({ lang: 'zh_CN' })
 
 onMounted(() => {
-  speech.speak('new bee')
+  speaker.speak('new bee')
 })
 
-useExpose({ speech })
+useExpose({ speaker })
 </script>
 ```
 
@@ -60,10 +60,10 @@ import useSpeak from 'use-speak'
 
 export default {
   setup() {
-    const speech = useSpeak({ lang: 'zh_CN' })
-    speech.speak('new bee')
+    const speaker = useSpeak({ lang: 'zh_CN' })
+    speaker.speak('new bee')
 
-    return { speech }
+    return { speaker }
   }
 }
 </script>
@@ -97,13 +97,20 @@ import useSpeak from 'use-speak'
 
 export default {
   setup() {
-    const speech = useSpeak({ lang: 'zh_CN' })
-    speech.speak('new bee')
+    const speaker = useSpeak({ lang: 'zh_CN' })
+    speaker.speak('new bee')
 
-    return { speech }
+    return { speaker }
   }
 }
 </script>
+```
+
+### Using unpkg CDN
+
+```html
+<!-- Add script tags to your html code, using CDN links to bring in -->
+<script src="https://unpkg.com/use-speak@1.0.0/dist/index.global.prod.js"></script>
 ```
 
 ## Support & Issues

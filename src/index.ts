@@ -49,7 +49,7 @@ const defaultOptions: SpeechOptions = {
 	volume: 1
 }
 
-function useSpeech(options: SpeechOptions) {
+function useSpeak(options: SpeechOptions) {
 	if (!inBrowser) return
 	if (typeof window.speechSynthesis === 'undefined') {
 		console.error('speechSynthesis is not supported')
@@ -62,12 +62,7 @@ function useSpeech(options: SpeechOptions) {
 	if (!utter) utter = ref(null)
 	if (!voice) {
 		voice = shallowRef()
-		// voiceschanged
-		const handler = () => {
-			voice.value = getVoice()
-			speech.removeEventListener('voiceschanged', handler)
-		}
-		speech.addEventListener('voiceschanged', handler)
+		getVoice().then(voices => (voice.value = voices))
 	}
 	if (!ready) {
 		ready = ref(!isChrome)
@@ -110,10 +105,18 @@ function useSpeech(options: SpeechOptions) {
 	 *
 	 * @returns result voice: SpeechSynthesisVoice
 	 */
-	function getVoice(): SpeechSynthesisVoice | undefined {
+	async function getVoice(): Promise<SpeechSynthesisVoice | undefined> {
 		if (voice.value) return voice.value
 
-		const list = speech.getVoices().sort((a, b) => {
+		let voices = speech.getVoices()
+		if (!voices || !voices.length) {
+			await new Promise(resolve =>
+				speech.addEventListener('voiceschanged', resolve, { once: true })
+			)
+			voices = speech.getVoices()
+		}
+
+		voices = voices.sort((a, b) => {
 			const nameA = a.name.toUpperCase()
 			const nameB = b.name.toUpperCase()
 			if (nameA < nameB) return -1
@@ -121,11 +124,11 @@ function useSpeech(options: SpeechOptions) {
 			return 1
 		})
 
-		if (options.voiceFilter) return list.find(options.voiceFilter)
-		return (
-			list.find(({ lang, localService }) => localService && lang === options.lang) ||
-			list.find(({ lang }) => lang === options.lang)
-		)
+		voice.value = options.voiceFilter
+			? voices.find(options.voiceFilter)
+			: voices.find(({ lang, localService }) => localService && lang === options.lang) ||
+			  voices.find(({ lang }) => lang === options.lang)
+		return voice.value
 	}
 
 	/**
@@ -208,4 +211,4 @@ function useSpeech(options: SpeechOptions) {
 	}
 }
 
-export { useSpeech, useSpeech as default }
+export default useSpeak

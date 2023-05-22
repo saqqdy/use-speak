@@ -1,127 +1,170 @@
-import type { RollupOptions } from 'rollup'
+import type { InternalModuleFormat, OutputOptions, Plugin, RollupOptions } from 'rollup'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import babel from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import cleanup from 'rollup-plugin-cleanup'
 import terser from '@rollup/plugin-terser'
 import typescript from '@rollup/plugin-typescript'
-import alias, { type ResolverObject } from '@rollup/plugin-alias'
+import injectCode from 'rollup-plugin-inject-code'
 import filesize from 'rollup-plugin-filesize'
 import { visualizer } from 'rollup-plugin-visualizer'
-import pkg from '../package.json' assert { type: 'json' }
 import { banner, extensions, reporter } from './config'
 
-const externals = [...Object.keys(pkg.dependencies || {})]
-const nodeResolver = nodeResolve({
-	// Use the `package.json` "browser" field
-	browser: false,
-	extensions,
-	preferBuiltins: true,
-	exportConditions: ['node'],
-	moduleDirectories: ['node_modules']
-})
-const iifeGlobals = {
-	vue: 'VueDemi',
-	'vue-demi': 'VueDemi',
-	'core-js': 'coreJs'
+export interface Config {
+	input: string
+	file: string
+	format: InternalModuleFormat
+	browser?: boolean
+	minify?: boolean
+	transpile?: boolean
+	env: 'development' | 'production'
+	plugins?: Plugin[]
 }
 
-const options: RollupOptions = {
-	plugins: [
-		alias({
-			customResolver: nodeResolver as ResolverObject,
-			entries: [
-				// {
-				//     find: /^#lib(.+)$/,
-				//     replacement: resolve(__dirname, '..', 'src', '$1.mjs')
-				// }
-			]
-		}),
-		nodeResolver,
-		commonjs({
-			sourceMap: false,
-			exclude: ['core-js']
-		}),
-		typescript({
-			compilerOptions: {
-				outDir: undefined,
-				declaration: false,
-				declarationDir: undefined,
-				target: 'es5'
+export interface Output extends OutputOptions {
+	plugins: Plugin[]
+}
+
+export interface Options extends RollupOptions {
+	external: string[]
+	plugins: Plugin[]
+	output: Output
+}
+
+const configs: Config[] = [
+	{
+		input: 'src/index.ts',
+		file: 'dist/index.esm-browser.js',
+		format: 'es',
+		browser: true,
+		env: 'development'
+	},
+	{
+		input: 'src/index.ts',
+		file: 'dist/index.esm-browser.prod.js',
+		format: 'es',
+		browser: true,
+		minify: true,
+		env: 'production'
+	},
+	{
+		input: 'src/index.ts',
+		file: 'dist/index.esm-bundler.js',
+		format: 'es',
+		env: 'development'
+	},
+	{
+		input: 'src/index.ts',
+		file: 'dist/index.mjs',
+		format: 'es',
+		env: 'development'
+	},
+	{
+		input: 'src/index.ts',
+		file: 'dist/index.global.js',
+		format: 'iife',
+		env: 'development'
+	},
+	{
+		input: 'src/index.ts',
+		file: 'dist/index.global.prod.js',
+		format: 'iife',
+		minify: true,
+		env: 'production'
+	},
+	{
+		input: 'src/index.ts',
+		file: 'dist/index.cjs.js',
+		format: 'cjs',
+		env: 'development'
+	}
+]
+
+function createEntries() {
+	return configs.map(createEntry)
+}
+
+function createEntry(config: Config) {
+	const isGlobalBuild = config.format === 'iife'
+	const isTypeScript = config.input.endsWith('.ts')
+	const isTranspiled =
+		config.file.endsWith('bundler.js') ||
+		config.file.endsWith('browser.js') ||
+		config.file.endsWith('prod.js')
+
+	const _config: Options = {
+		external: ['vue-demi', 'vue'],
+		input: config.input,
+		plugins: [],
+		output: {
+			file: config.file,
+			format: config.format,
+			exports: 'auto',
+			sourcemap: false,
+			extend: true,
+			plugins: [],
+			globals: {
+				vue: 'VueDemi',
+				'vue-demi': 'VueDemi'
 			}
-		}),
-		babel({
-			babelHelpers: 'bundled',
-			extensions,
-			exclude: ['node_modules']
-		}),
+		},
+		onwarn: (msg: any, warn) => {
+			if (!/Circular/.test(msg)) {
+				warn(msg)
+			}
+		}
+	}
+
+	if (isGlobalBuild || config.browser) _config.output.banner = banner
+
+	if (isGlobalBuild) {
+		_config.output.name = _config.output.name || 'useSpeak'
+		_config.output.plugins.push(
+			injectCode({
+				path: 'vue-demi/lib/index.iife.js'
+			})
+		)
+	}
+
+	if (!isGlobalBuild) {
+		_config.external.push('core-js')
+	}
+
+	_config.plugins.push(nodeResolve(), commonjs())
+
+	if (config.transpile !== false) {
+		!isTranspiled &&
+			_config.plugins.push(
+				babel({
+					babelHelpers: 'bundled',
+					extensions,
+					exclude: [/node_modules[\\/]core-js/]
+				})
+			)
+		isTypeScript &&
+			_config.plugins.push(
+				typescript({
+					compilerOptions: {
+						declaration: false
+					}
+				})
+			)
+	}
+
+	if (config.minify) {
+		_config.plugins.push(terser({ module: config.format === 'es' }))
+		_config.output.plugins.push(terser())
+	}
+
+	_config.plugins.push(
 		cleanup({
 			comments: 'all'
 		}),
 		filesize({ reporter }),
 		visualizer()
-	]
+	)
+
+	return _config
 }
 
-const distDir = (path: string) =>
-	process.env.BABEL_ENV === 'es5' ? path.replace('index', 'index.es5') : path
-
-export default [
-	{
-		input: 'src/index.ts',
-		output: [
-			{
-				file: distDir(pkg.main),
-				exports: 'auto',
-				format: 'cjs'
-			},
-			{
-				file: distDir(pkg.module),
-				exports: 'auto',
-				format: 'es'
-			}
-		],
-		external(id: string) {
-			return ['core-js'].concat(externals).some(k => new RegExp('^' + k).test(id))
-		},
-		...options
-	},
-	{
-		// input: 'src/index.ts',
-		input: distDir('dist/index.mjs'),
-		output: [
-			{
-				file: distDir('dist/index.iife.js'),
-				format: 'iife',
-				name: 'useSpeak',
-				extend: true,
-				globals: iifeGlobals,
-				banner
-			},
-			{
-				file: distDir(pkg.unpkg),
-				format: 'iife',
-				name: 'useSpeak',
-				extend: true,
-				globals: iifeGlobals,
-				banner,
-				plugins: [terser()]
-			}
-		],
-		external(id: string) {
-			return ['vue', 'vue-demi'].some(k => new RegExp('^' + k).test(id))
-		},
-		plugins: [
-			nodeResolver,
-			cleanup({
-				comments: 'all'
-			}),
-			commonjs({
-				sourceMap: false,
-				exclude: ['core-js']
-			}),
-			filesize({ reporter }),
-			visualizer()
-		]
-	}
-]
+export default createEntries()
