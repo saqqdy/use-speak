@@ -1,9 +1,11 @@
 {
 	"cSpell.words": [
+		"camelcase",
 		"corejs",
 		"demi",
 		"filesize",
 		"iife",
+		"onwarn",
 		"reinstaller",
 		"saqqdy",
 		"tscjs",
