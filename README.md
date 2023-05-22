@@ -16,7 +16,7 @@ A composition api for SpeechSynthesis, supports vue2.0 and vue3.0
 
 <div style="text-align: center; margin-bottom: 20px;" align="center">
 
-## **For API documentation, see: [API Docs](./docs/modules.md)**
+### **[Documentation](https://www.saqqdy.com/use-speak)** • **[Change Log](./CHANGELOG.md)**
 
 </div>
 
