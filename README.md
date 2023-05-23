@@ -110,7 +110,7 @@ export default {
 
 ```html
 <!-- Add script tags to your html code, using CDN links to bring in -->
-<script src="https://unpkg.com/use-speak@1.0.0/dist/index.global.prod.js"></script>
+<script src="https://unpkg.com/use-speak@1.1.0/dist/index.global.prod.js"></script>
 ```
 
 ## Support & Issues

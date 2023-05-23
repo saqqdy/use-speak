@@ -1,7 +1,7 @@
 {
 	"name": "use-speak",
 	"description": "A composition api for SpeechSynthesis, supports vue2.0 and vue3.0",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"packageManager": "pnpm@8.5.1",
 	"main": "dist/index.cjs.js",
 	"module": "dist/index.esm-bundler.js",
@@ -30,9 +30,9 @@
 		"src": "src"
 	},
 	"scripts": {
-		"build": "run-s clean build:{bundle,types} roll-types",
+		"build": "run-s clean build:{bundle,types}",
 		"build:bundle": "rollup -c build/rollup.config.ts --configPlugin @rollup/plugin-typescript",
-		"build:types": "tsc --emitDeclarationOnly --outDir temp -p src",
+		"build:types": "tsc --emitDeclarationOnly --outDir temp -p src && pnpm roll-types",
 		"build:docs": "rm-all docs && typedoc && prettier --write \"**/*.md\"",
 		"deploy": "sh scripts/deploy.sh",
 		"roll-types": "api-extractor run && rm-all temp",
@@ -52,7 +52,7 @@
 		"prettier": "prettier --write \"**/*.{js,ts,jsx,tsx,yml,json,md}\""
 	},
 	"dependencies": {
-		"js-cool": "^4.2.0",
+		"js-cool": "^4.4.0",
 		"vue-demi": "^0.14.5"
 	},
 	"devDependencies": {
@@ -60,7 +60,7 @@
 		"@babel/preset-env": "^7.21.5",
 		"@babel/preset-typescript": "^7.21.5",
 		"@eslint-sets/eslint-config-ts": "^5.2.0",
-		"@microsoft/api-extractor": "^7.34.9",
+		"@microsoft/api-extractor": "^7.35.0",
 		"@rollup/plugin-babel": "^6.0.3",
 		"@rollup/plugin-commonjs": "^25.0.0",
 		"@rollup/plugin-node-resolve": "^15.0.2",
@@ -81,7 +81,7 @@
 		"prettier-config-common": "^1.4.0",
 		"reinstaller": "^3.0.0",
 		"rm-all": "^1.0.0",
-		"rollup": "^3.22.1",
+		"rollup": "^3.23.0",
 		"rollup-plugin-cleanup": "^3.2.1",
 		"rollup-plugin-filesize": "^10.0.0",
 		"rollup-plugin-inject-code": "^1.0.0",
@@ -110,7 +110,7 @@
 				"webpack"
 			],
 			"allowedVersions": {
-				"rollup": "3.22.1",
+				"rollup": ">=3.22.0",
 				"eslint": "^8.0.0"
 			}
 		}
