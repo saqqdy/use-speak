@@ -1,6 +1,5 @@
 import { ref, shallowRef, watch } from 'vue-demi'
 import type { Ref, ShallowRef } from 'vue-demi'
-import { extend } from 'js-cool'
 import { inBrowser, isChrome } from './utils'
 
 export interface SpeechOptions {
@@ -56,7 +55,7 @@ function useSpeak(options: SpeechOptions) {
 		return
 	}
 
-	options = extend(true, {}, defaultOptions, options) as unknown as SpeechOptions
+	options = Object.assign(defaultOptions, options || {})
 	if (!speech) speech = window.speechSynthesis
 	if (!effects) effects = ref([])
 	if (!utter) utter = ref(null)
@@ -93,8 +92,10 @@ function useSpeak(options: SpeechOptions) {
 		const handler = () => {
 			speech.speak(new SpeechSynthesisUtterance(''))
 			ready.value = speech.speaking || speech.pending
-			window.removeEventListener(eventName, handler)
-			window.removeEventListener('keypress', handler)
+			if (ready.value) {
+				window.removeEventListener(eventName, handler)
+				window.removeEventListener('keypress', handler)
+			}
 		}
 		window.addEventListener(eventName, handler)
 		window.addEventListener('keypress', handler)

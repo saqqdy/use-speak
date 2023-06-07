@@ -1,5 +1,10 @@
 # Change logs
 
+## 2023.06.07 v1.2.0
+
+1. fix init bug
+2. upgrade all packages
+
 ## 2023.05.23 v1.1.0
 
 1. fix outputs
